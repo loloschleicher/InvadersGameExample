@@ -1,6 +1,6 @@
-import {Invasor} from "Invas";
 
-class Nave{
+
+export class Nave{
     vida: number;
     velocidad: number;
 
@@ -9,8 +9,8 @@ class Nave{
         this.velocidad = velocidad;
     }
 
-    destruir(invasor: Invasor){
-        var inv = new Invasor();
+    destruir(nombre: string){
+        return 0;
     
     }
 
