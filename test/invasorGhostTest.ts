@@ -13,14 +13,14 @@ describe("Invasor Ghost , destruir y chocar nave", function(){
         expect(invasorGhost.getVida()).to.equal(50);
 
     })
-    /*it("Cuando destruye debe dar 40 la vida de la nave", function(){
+    it("Cuando ghost choca contra la nave", function(){
 
         var nave = new Nave(100, 90);
-        var invasor = new Invasor(100, 50);
+        var invasorGhost = new InvasorGhost(100, 50);
 
-        invasorGhost.destruirNave(nave);
+        invasorGhost.chocarNave(nave);
 
-        expect(nave.getVida()).to.equal(40);
+        expect(nave.getVida()).to.equal(100);
 
-    })*/
+    })
 })
