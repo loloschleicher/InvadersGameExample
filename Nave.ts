@@ -33,7 +33,7 @@ export class Nave{
     }
 
     destruirGhost(invasorGhost: InvasorGhost){
-        invasorGhost.setVida(100);
+        
     }
 
 

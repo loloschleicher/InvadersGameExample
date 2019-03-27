@@ -23,7 +23,6 @@ var Nave = /** @class */ (function () {
         invasor.setVida(nuevaVida);
     };
     Nave.prototype.destruirGhost = function (invasorGhost) {
-        invasorGhost.setVida(100);
     };
     return Nave;
 }());
