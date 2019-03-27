@@ -1,4 +1,5 @@
 import { Invasor } from "./Invasor";
+import { InvasorGhost } from "./InvasorGhost";
 
 export class Nave{
     vida: number;
@@ -29,6 +30,10 @@ export class Nave{
         var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 100;
         var nuevaVida = invasor.getVida() - vidaPerdida;
         invasor.setVida(nuevaVida); 
+    }
+
+    destruirGhost(invasorGhost: InvasorGhost){
+        invasorGhost.setVida(100);
     }
 
 
