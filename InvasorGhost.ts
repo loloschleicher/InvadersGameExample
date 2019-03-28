@@ -1,23 +1,16 @@
 import {Nave} from "./Nave";
 import { Artefacto } from "./Artefacto";
+import { Personaje } from "./Personaje";
 
-export class InvasorGhost extends Artefacto{
+export class InvasorGhost extends Personaje{
     vida: number;
     velocidad: number;
 
-    constructor(vida: number, velocidad: number){
-        this.setVida(vida);
-        super(velocidad);
-    }
-
-    setVida(vida: number){
-        this.vida = vida; 
+    constructor(vida: number, velocidad: number){  
+        super(vida, velocidad);
     }
 
 
-    getVida():number{
-        return this.vida; 
-    }
 
 
     chocarNave(nave: Nave){

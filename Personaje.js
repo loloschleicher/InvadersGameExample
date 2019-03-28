@@ -13,19 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Personaje_1 = require("./Personaje");
-var InvasorGhost = /** @class */ (function (_super) {
-    __extends(InvasorGhost, _super);
-    function InvasorGhost(vida, velocidad) {
-        return _super.call(this, vida, velocidad) || this;
+var Artefacto_1 = require("./Artefacto");
+var Personaje = /** @class */ (function (_super) {
+    __extends(Personaje, _super);
+    function Personaje(vida, velocidad) {
+        var _this = _super.call(this, velocidad) || this;
+        _this.setVida(vida);
+        return _this;
     }
-    InvasorGhost.prototype.chocarNave = function (nave) {
+    Personaje.prototype.setVida = function (vida) {
+        this.vida = vida;
     };
-    InvasorGhost.prototype.destruirNave = function (nave) {
-        var nuevoDanio = (this.getVelocidad() * 20 / 100) + this.getVelocidad();
-        var nuevaVida = nave.getVida() - nuevoDanio;
-        nave.setVida(nuevaVida);
+    Personaje.prototype.getVida = function () {
+        return this.vida;
     };
-    return InvasorGhost;
-}(Personaje_1.Personaje));
-exports.InvasorGhost = InvasorGhost;
+    return Personaje;
+}(Artefacto_1.Artefacto));
+exports.Personaje = Personaje;

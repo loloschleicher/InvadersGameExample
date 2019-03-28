@@ -13,21 +13,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Artefacto_1 = require("./Artefacto");
+var Personaje_1 = require("./Personaje");
 var Nave = /** @class */ (function (_super) {
     __extends(Nave, _super);
     function Nave(vida, velocidad) {
-        var _this = this;
-        _this.setVida(vida);
-        _this = _super.call(this, velocidad) || this;
-        return _this;
+        return _super.call(this, vida, velocidad) || this;
     }
-    Nave.prototype.setVida = function (vida) {
-        this.vida = vida;
-    };
-    Nave.prototype.getVida = function () {
-        return this.vida;
-    };
     Nave.prototype.destruir = function (invasor) {
         var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 100;
         var nuevaVida = invasor.getVida() - vidaPerdida;
@@ -36,5 +27,5 @@ var Nave = /** @class */ (function (_super) {
     Nave.prototype.destruirGhost = function (invasorGhost) {
     };
     return Nave;
-}(Artefacto_1.Artefacto));
+}(Personaje_1.Personaje));
 exports.Nave = Nave;

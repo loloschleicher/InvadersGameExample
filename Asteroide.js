@@ -19,12 +19,6 @@ var Asteroide = /** @class */ (function (_super) {
     function Asteroide(velocidad) {
         return _super.call(this, velocidad) || this;
     }
-    Asteroide.prototype.setVelocidad = function (velocidad) {
-        this.velocidad = velocidad;
-    };
-    Asteroide.prototype.getVelocidad = function () {
-        return this.velocidad;
-    };
     Asteroide.prototype.chocarNave = function (nave) {
         var vidaPerdida = (nave.getVelocidad() * this.getVelocidad()) / 200;
         var nuevaVida = nave.getVida() - vidaPerdida;

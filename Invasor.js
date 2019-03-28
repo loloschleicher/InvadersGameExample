@@ -13,14 +13,11 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Artefacto_1 = require("./Artefacto");
+var Personaje_1 = require("./Personaje");
 var Invasor = /** @class */ (function (_super) {
     __extends(Invasor, _super);
     function Invasor(vida, velocidad) {
-        var _this = this;
-        _this.setVida(vida);
-        _this = _super.call(this, velocidad) || this;
-        return _this;
+        return _super.call(this, vida, velocidad) || this;
     }
     Invasor.prototype.setVida = function (vida) {
         this.vida = vida;
@@ -37,5 +34,5 @@ var Invasor = /** @class */ (function (_super) {
         nave.setVida(nuevaVida);
     };
     return Invasor;
-}(Artefacto_1.Artefacto));
+}(Personaje_1.Personaje));
 exports.Invasor = Invasor;
