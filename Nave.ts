@@ -1,30 +1,26 @@
 import { Invasor } from "./Invasor";
 import { InvasorGhost } from "./InvasorGhost";
+import { Artefacto } from "./Artefacto";
 
-export class Nave{
+export class Nave extends Artefacto{
     vida: number;
     velocidad: number;
 
     constructor(vida: number, velocidad: number){
+        super(velocidad);
         this.setVida(vida);
-        this.setVelocidad(velocidad);
     }
 
     setVida(vida: number){
         this.vida = vida; 
     }
 
-    setVelocidad(velocidad: number){
-        this.velocidad = velocidad; 
-    }
+   
 
     getVida():number{
         return this.vida; 
     }
 
-    getVelocidad():number{
-        return this.velocidad; 
-    }
 
     destruir(invasor: Invasor){
         var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 100;

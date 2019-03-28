@@ -1,8 +1,23 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 exports.__esModule = true;
-var Asteroide = /** @class */ (function () {
+var Artefacto_1 = require("./Artefacto");
+var Asteroide = /** @class */ (function (_super) {
+    __extends(Asteroide, _super);
     function Asteroide(velocidad) {
-        this.setVelocidad(velocidad);
+        return _super.call(this, velocidad) || this;
     }
     Asteroide.prototype.setVelocidad = function (velocidad) {
         this.velocidad = velocidad;
@@ -21,5 +36,5 @@ var Asteroide = /** @class */ (function () {
         invasor.setVida(nuevaVida);
     };
     return Asteroide;
-}());
+}(Artefacto_1.Artefacto));
 exports.Asteroide = Asteroide;
