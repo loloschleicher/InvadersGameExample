@@ -13,18 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
+var Invasor_1 = require("./Invasor");
 var Personaje_1 = require("./Personaje");
 var Nave = /** @class */ (function (_super) {
     __extends(Nave, _super);
     function Nave(vida, velocidad) {
         return _super.call(this, vida, velocidad) || this;
     }
-    Nave.prototype.destruir = function (invasor) {
-        var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 100;
-        var nuevaVida = invasor.getVida() - vidaPerdida;
-        invasor.setVida(nuevaVida);
-    };
-    Nave.prototype.destruirGhost = function (invasorGhost) {
+    Nave.prototype.destruir = function (personaje) {
+        console.log(personaje instanceof Invasor_1.Invasor);
+        if (personaje instanceof Invasor_1.Invasor) {
+            var vidaPerdida = (personaje.getVelocidad() * this.getVelocidad()) / 100;
+            var nuevaVida = personaje.getVida() - vidaPerdida;
+            personaje.setVida(nuevaVida);
+        }
     };
     return Nave;
 }(Personaje_1.Personaje));

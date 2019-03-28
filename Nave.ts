@@ -1,6 +1,5 @@
 import { Invasor } from "./Invasor";
 import { InvasorGhost } from "./InvasorGhost";
-import { Artefacto } from "./Artefacto";
 import { Personaje } from "./Personaje";
 
 export class Nave extends Personaje{
@@ -12,15 +11,16 @@ export class Nave extends Personaje{
         
     }
 
-    destruir(invasor: Invasor){
-        var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 100;
-        var nuevaVida = invasor.getVida() - vidaPerdida;
-        invasor.setVida(nuevaVida); 
-    }
-
-    destruirGhost(invasorGhost: InvasorGhost){
+    destruir(personaje: any){
+        console.log(personaje instanceof Invasor);
+        if(personaje instanceof Invasor){
+            var vidaPerdida = (personaje.getVelocidad() * this.getVelocidad()) / 100;
+            var nuevaVida = personaje.getVida() - vidaPerdida;
+            personaje.setVida(nuevaVida); 
+        }
         
     }
 
+    
 
 }

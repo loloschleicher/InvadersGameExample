@@ -1,5 +1,4 @@
 import {Nave} from "./Nave";
-import { Artefacto } from "./Artefacto";
 import { Personaje } from "./Personaje";
 
 export class Invasor extends Personaje{

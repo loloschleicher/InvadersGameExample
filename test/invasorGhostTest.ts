@@ -1,4 +1,4 @@
-import { Invasor } from "../Invasor";
+
 import { InvasorGhost } from "../InvasorGhost";
 import { Nave } from "../Nave";
 import {expect} from "chai";
@@ -8,7 +8,7 @@ describe("Invasor Ghost , destruir y chocar nave", function(){
         var nave = new Nave(100, 90);
         var invasorGhost = new InvasorGhost(50, 50);
 
-        nave.destruirGhost(invasorGhost);
+        nave.destruir(invasorGhost);
 
         expect(invasorGhost.getVida()).to.equal(50);
 
@@ -31,7 +31,7 @@ describe("Invasor Ghost , destruir y chocar nave", function(){
 
         invasorGhost.destruirNave(nave);
 
-        expect(nave.getVida()).to.equal(40);
+        expect(invasorGhost.getVida()).to.equal(100);
 
     })
 })
