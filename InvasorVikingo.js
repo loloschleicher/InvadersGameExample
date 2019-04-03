@@ -27,11 +27,6 @@ var Invasor = /** @class */ (function (_super) {
     };
     Invasor.prototype.chocarNave = function (nave) {
     };
-    Invasor.prototype.destruirNave = function (nave) {
-        var nuevoDanio = (this.getVelocidad() * 20 / 100) + this.getVelocidad();
-        var nuevaVida = nave.getVida() - nuevoDanio;
-        nave.setVida(nuevaVida);
-    };
     return Invasor;
 }(Personaje_1.Personaje));
 exports.Invasor = Invasor;

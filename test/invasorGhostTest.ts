@@ -4,15 +4,6 @@ import { Nave } from "../Nave";
 import {expect} from "chai";
 
 describe("Invasor Ghost , destruir y chocar nave", function(){
-    it("Cuando choca debe dar igual a 0 la vida de la nave", function(){
-        var nave = new Nave(100, 90);
-        var invasorGhost = new InvasorGhost(50, 50);
-
-        nave.destruir(invasorGhost);
-
-        expect(invasorGhost.getVida()).to.equal(50);
-
-    })
     it("Cuando ghost choca contra la nave", function(){
 
         var nave = new Nave(100, 90);
@@ -31,7 +22,7 @@ describe("Invasor Ghost , destruir y chocar nave", function(){
 
         invasorGhost.destruirNave(nave);
 
-        expect(invasorGhost.getVida()).to.equal(100);
+        expect(nave.getVida()).to.equal(55);
 
     })
 })

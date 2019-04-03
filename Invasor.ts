@@ -20,7 +20,7 @@ export class Invasor extends Personaje{
 
 
     chocarNave(nave: Nave){
-        nave.setVida(0);
+      nave.setVida(0);
     }
 
     destruirNave(nave: Nave){
@@ -28,4 +28,12 @@ export class Invasor extends Personaje{
         var nuevaVida = nave.getVida() - nuevoDanio;
         nave.setVida(nuevaVida);       
     }
+
+    destruitePorNave(this){
+        var vidaPerdida = (this.getVelocidad() * this.getVelocidad()) / 100;
+        var nuevaVida = this.getVida() - vidaPerdida;
+        this.setVida(nuevaVida);       
+    }
+
+   
 }

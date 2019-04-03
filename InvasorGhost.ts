@@ -11,8 +11,6 @@ export class InvasorGhost extends Personaje{
     }
 
 
-
-
     chocarNave(nave: Nave){
         
     }
@@ -22,4 +20,10 @@ export class InvasorGhost extends Personaje{
         var nuevaVida = nave.getVida() - nuevoDanio;
         nave.setVida(nuevaVida);       
     }
+
+    destruitePorNave(this){
+            
+    }
+
+   
 }

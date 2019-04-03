@@ -27,6 +27,11 @@ var Personaje = /** @class */ (function (_super) {
     Personaje.prototype.getVida = function () {
         return this.vida;
     };
+    Personaje.prototype.destruitePorNave = function () {
+        var vidaPerdida = (this.getVelocidad() * this.getVelocidad()) / 100;
+        var nuevaVida = this.getVida() - vidaPerdida;
+        this.setVida(nuevaVida);
+    };
     return Personaje;
 }(Artefacto_1.Artefacto));
 exports.Personaje = Personaje;

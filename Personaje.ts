@@ -18,4 +18,11 @@ export class Personaje extends Artefacto{
     getVida():number{
         return this.vida; 
     }
+
+    destruitePorNave(this){
+              
+    }
+
+
+    
 }

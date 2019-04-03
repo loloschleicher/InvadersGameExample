@@ -13,7 +13,6 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Invasor_1 = require("./Invasor");
 var Personaje_1 = require("./Personaje");
 var Nave = /** @class */ (function (_super) {
     __extends(Nave, _super);
@@ -21,12 +20,15 @@ var Nave = /** @class */ (function (_super) {
         return _super.call(this, vida, velocidad) || this;
     }
     Nave.prototype.destruir = function (personaje) {
-        console.log(personaje instanceof Invasor_1.Invasor);
-        if (personaje instanceof Invasor_1.Invasor) {
+        personaje.destruitePorNave();
+        /*console.log(personaje instanceof Invasor);
+        if(personaje instanceof Invasor){
             var vidaPerdida = (personaje.getVelocidad() * this.getVelocidad()) / 100;
             var nuevaVida = personaje.getVida() - vidaPerdida;
             personaje.setVida(nuevaVida);
-        }
+        }else if(personaje instanceof InvasorVikingo){
+
+        }*/
     };
     return Nave;
 }(Personaje_1.Personaje));

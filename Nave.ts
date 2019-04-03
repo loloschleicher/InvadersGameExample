@@ -11,13 +11,17 @@ export class Nave extends Personaje{
         
     }
 
-    destruir(personaje: any){
-        console.log(personaje instanceof Invasor);
+    destruir(personaje: Personaje){
+
+        personaje.destruitePorNave();
+        /*console.log(personaje instanceof Invasor);
         if(personaje instanceof Invasor){
             var vidaPerdida = (personaje.getVelocidad() * this.getVelocidad()) / 100;
             var nuevaVida = personaje.getVida() - vidaPerdida;
             personaje.setVida(nuevaVida); 
-        }
+        }else if(personaje instanceof InvasorVikingo){
+
+        }*/
         
     }
 
