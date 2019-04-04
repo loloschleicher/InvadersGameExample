@@ -1,6 +1,8 @@
 import {Nave} from "./Nave";
 import { Personaje } from "./Personaje";
 
+
+
 export class Invasor extends Personaje{
     vida: number;
     velocidad: number;
@@ -19,8 +21,9 @@ export class Invasor extends Personaje{
     }
 
 
-    chocarNave(nave: Nave){
-      nave.setVida(0);
+    chocar(nave: Nave){
+      var nuevaVida = 0;  
+      return nave.chocate(nuevaVida); 
     }
 
     destruirNave(nave: Nave){

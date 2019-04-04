@@ -1,6 +1,7 @@
 import {Nave} from "./Nave";
 import { Personaje } from "./Personaje";
 
+
 export class InvasorVikingo extends Personaje{
     vida: number;
     velocidad: number;
@@ -9,14 +10,6 @@ export class InvasorVikingo extends Personaje{
         super(vida, velocidad);
     }
 
-    setVida(vida: number){
-        this.vida = vida; 
-    }
-
-   
-    getVida():number{
-        return this.vida; 
-    }
 
     destruitePorNave(this){
         var vida = this.getVida();
@@ -26,12 +19,15 @@ export class InvasorVikingo extends Personaje{
     }
 
     destruirNave(nave: Nave){
-        //falta agregar
+        var danio = 90 * this.getVelocidad() / 100;
+        var nuevaVida = nave.getVida() - danio;
+        nave.setVida(nuevaVida);
     }
 
-    chocarNave(nave: Nave){
-        //falta agregar
+    chocar(nave: Nave){
+        var danio = 90 * this.getVelocidad() / 100;
+        var nuevaVida = nave.getVida() - danio;
+        return nave.chocate(nuevaVida);
     }
-
    
 }

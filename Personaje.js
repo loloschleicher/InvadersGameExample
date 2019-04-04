@@ -28,8 +28,11 @@ var Personaje = /** @class */ (function (_super) {
         return this.vida;
     };
     Personaje.prototype.destruitePorNave = function () {
-        var vidaPerdida = (this.getVelocidad() * this.getVelocidad()) / 100;
-        var nuevaVida = this.getVida() - vidaPerdida;
+    };
+    /* chocar(victima: IChocable){
+ 
+     }*/
+    Personaje.prototype.chocate = function (nuevaVida) {
         this.setVida(nuevaVida);
     };
     return Personaje;

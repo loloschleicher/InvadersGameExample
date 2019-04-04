@@ -2,17 +2,17 @@ import { Invasor } from "../Invasor";
 import { Nave } from "../Nave";
 import {expect} from "chai";
 
-describe("destruir y chocar nave", function(){
-    it("Cuando choca debe dar igual a 100 la vida de la nave", function(){
+describe("Invasor contra nave", function(){
+    it("Cuando choca contra la nave", function(){
         var nave = new Nave(100, 90);
         var invasor = new Invasor(100, 50);
 
-        invasor.chocarNave(nave);
+        invasor.chocar(nave);
 
-        expect(nave.getVida()).to.equal(100);
+        expect(nave.getVida()).to.equal(0);
 
     })
-    it("Cuando destruye debe dar 40 la vida de la nave", function(){
+    it("Cuando destruye la nave", function(){
 
         var nave = new Nave(100, 90);
         var invasor = new Invasor(100, 50);

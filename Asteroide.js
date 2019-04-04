@@ -19,15 +19,22 @@ var Asteroide = /** @class */ (function (_super) {
     function Asteroide(velocidad) {
         return _super.call(this, velocidad) || this;
     }
-    Asteroide.prototype.chocarNave = function (nave) {
+    /*chocarNave(nave: Nave){
         var vidaPerdida = (nave.getVelocidad() * this.getVelocidad()) / 200;
         var nuevaVida = nave.getVida() - vidaPerdida;
         nave.setVida(nuevaVida);
-    };
-    Asteroide.prototype.chocarInvasor = function (invasor) {
+    }
+
+    chocarInvasor(invasor: Invasor){
         var vidaPerdida = (invasor.getVelocidad() * this.getVelocidad()) / 200;
         var nuevaVida = invasor.getVida() - vidaPerdida;
         invasor.setVida(nuevaVida);
+        
+    }*/
+    Asteroide.prototype.chocar = function (personaje) {
+        var vidaPerdida = (personaje.getVelocidad() * this.getVelocidad()) / 200;
+        var nuevaVida = personaje.getVida() - vidaPerdida;
+        return personaje.chocate(nuevaVida);
     };
     return Asteroide;
 }(Artefacto_1.Artefacto));

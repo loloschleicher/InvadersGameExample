@@ -19,12 +19,14 @@ var InvasorGhost = /** @class */ (function (_super) {
     function InvasorGhost(vida, velocidad) {
         return _super.call(this, vida, velocidad) || this;
     }
-    InvasorGhost.prototype.chocarNave = function (nave) {
+    InvasorGhost.prototype.chocar = function (nave) {
     };
     InvasorGhost.prototype.destruirNave = function (nave) {
         var nuevoDanio = (this.getVelocidad() * 20 / 100) + this.getVelocidad();
         var nuevaVida = nave.getVida() - nuevoDanio;
         nave.setVida(nuevaVida);
+    };
+    InvasorGhost.prototype.destruitePorNave = function () {
     };
     return InvasorGhost;
 }(Personaje_1.Personaje));

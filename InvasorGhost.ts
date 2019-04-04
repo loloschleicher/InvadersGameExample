@@ -11,7 +11,7 @@ export class InvasorGhost extends Personaje{
     }
 
 
-    chocarNave(nave: Nave){
+    chocar(nave: Nave){
         
     }
 
@@ -24,6 +24,7 @@ export class InvasorGhost extends Personaje{
     destruitePorNave(this){
             
     }
+
 
    
 }

@@ -14,19 +14,27 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var Personaje_1 = require("./Personaje");
-var Invasor = /** @class */ (function (_super) {
-    __extends(Invasor, _super);
-    function Invasor(vida, velocidad) {
+var InvasorVikingo = /** @class */ (function (_super) {
+    __extends(InvasorVikingo, _super);
+    function InvasorVikingo(vida, velocidad) {
         return _super.call(this, vida, velocidad) || this;
     }
-    Invasor.prototype.setVida = function (vida) {
-        this.vida = vida;
+    InvasorVikingo.prototype.destruitePorNave = function () {
+        var vida = this.getVida();
+        var valor = (this.getVelocidad() * 10) / 100;
+        var nuevaVida = vida - valor;
+        this.setVida(nuevaVida);
     };
-    Invasor.prototype.getVida = function () {
-        return this.vida;
+    InvasorVikingo.prototype.destruirNave = function (nave) {
+        var danio = 90 * this.getVelocidad() / 100;
+        var nuevaVida = nave.getVida() - danio;
+        nave.setVida(nuevaVida);
     };
-    Invasor.prototype.chocarNave = function (nave) {
+    InvasorVikingo.prototype.chocar = function (nave) {
+        var danio = 90 * this.getVelocidad() / 100;
+        var nuevaVida = nave.getVida() - danio;
+        return nave.chocate(nuevaVida);
     };
-    return Invasor;
+    return InvasorVikingo;
 }(Personaje_1.Personaje));
-exports.Invasor = Invasor;
+exports.InvasorVikingo = InvasorVikingo;

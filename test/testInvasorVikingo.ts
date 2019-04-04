@@ -3,24 +3,24 @@ import { InvasorVikingo } from "../InvasorVikingo";
 import { Nave } from "../Nave";
 import {expect} from "chai";
 
-describe("destruir y chocar nave", function(){
-    it("Cuando choca debe dar igual a 0 la vida de la nave", function(){
+describe("invasor vikingo contra nave", function(){
+    it("Cuando choca la nave", function(){
         var nave = new Nave(100, 90);
-        var invasor = new Invasor(100, 50);
+        var invasorVikingo = new InvasorVikingo(100, 50);
 
-        invasor.chocarNave(nave);
+        invasorVikingo.chocar(nave);
 
-        expect(nave.getVida()).to.equal(0);
+        expect(nave.getVida()).to.equal(55);
 
     })
-    it("Cuando destruye debe dar 40 la vida de la nave", function(){
+    it("Cuando destruye la nave", function(){
 
         var nave = new Nave(100, 90);
         var invasorVikingo = new InvasorVikingo(100, 50);
 
-        nave.destruir(invasorVikingo);
+        invasorVikingo.destruirNave(nave);
 
-        expect(nave.getVida()).to.equal(40);
+        expect(nave.getVida()).to.equal(55);
 
     })
 })

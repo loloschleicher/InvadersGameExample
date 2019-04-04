@@ -1,6 +1,7 @@
 import { Artefacto } from "./Artefacto";
+import { IChocable } from "./Ichocable";
 
-export class Personaje extends Artefacto{
+export class Personaje extends Artefacto implements IChocable{
     vida: number;
     velocidad: number;
 
@@ -18,9 +19,18 @@ export class Personaje extends Artefacto{
     getVida():number{
         return this.vida; 
     }
+    
 
     destruitePorNave(this){
               
+    }
+
+   /* chocar(victima: IChocable){
+
+    }*/
+
+    chocate(nuevaVida: number){
+        this.setVida(nuevaVida);
     }
 
 

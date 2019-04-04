@@ -1,6 +1,8 @@
+import { IChocable } from "./IChocable";
 
-
-export class Artefacto{
+export class Artefacto implements IChocable{
+   
+    
     velocidad: number;
 
     constructor(velocidad: number){
@@ -14,5 +16,13 @@ export class Artefacto{
 
     getVelocidad():number{
         return this.velocidad; 
+    }
+
+    chocar(victima: IChocable){
+        
+    }
+
+    chocate(danio: any) {
+        throw new Error("Method not implemented.");
     }
 }

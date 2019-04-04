@@ -3,17 +3,17 @@ import {Invasor} from "../Invasor";
 import {Asteroide} from "../Asteroide";
 import {expect} from 'chai';
 
-describe('Chocar Asteroides contra nave/invasores', function(){
-    it('Deberia ser igual a 68', function(){
+describe('Asteroides contra nave/invasores', function(){
+    it('contra invasores', function(){
         var invasor = new Invasor(100, 80);
         var asteroide = new Asteroide(80);
-        asteroide.chocarInvasor(invasor);
+        asteroide.chocar(invasor);
         expect(invasor.getVida()).to.equal(68);
     });
-    it('Deberia ser igual a 68', function(){
+    it('contra la nave', function(){
         var nave = new Nave(100, 80);
         var asteroide = new Asteroide(80);
-        asteroide.chocarNave(nave);
+        asteroide.chocar(nave);
         expect(nave.getVida()).to.equal(68);
     });
 });

@@ -10,6 +10,11 @@ var Artefacto = /** @class */ (function () {
     Artefacto.prototype.getVelocidad = function () {
         return this.velocidad;
     };
+    Artefacto.prototype.chocar = function (victima) {
+    };
+    Artefacto.prototype.chocate = function (danio) {
+        throw new Error("Method not implemented.");
+    };
     return Artefacto;
 }());
 exports.Artefacto = Artefacto;
